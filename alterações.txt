@@ -1,0 +1,8 @@
+na tabela tarefa fotos:
+	colocar a localização da foto, diminui o tamanho do consumo do armazenamento.
+
+
+criar o campo status na tabela atribuicao_tarefa
+
+
+tar_status alterar para INT (iniciada, pendente, finalizada, etc).

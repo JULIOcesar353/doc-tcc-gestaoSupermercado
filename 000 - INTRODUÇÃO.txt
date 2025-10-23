@@ -1,0 +1,10 @@
+Se oriente pela analise de requisitos a seguir para criar a introdução de um trabalho de conclusão de curso, para um curso técnico em desenvolvimento de sistemas. O objetivo do trabalho é desenvolver uma sistema com  uma api (node js com express), um front-end (vite js) e uma versão mobile (react native - expo). Construa a introdução baseando-se em modelos de introdução de trabalhos de conclusão de curso ou artigo científico. 
+Informações sobre o trabalho: 
+
+**Pertinência, relevância e viabilidade**
+
+Gostaria que na introdução existam citações baseadas nos conteúdos a seguir (no final gerar as referências no formato ABNT para as citações realizadas):  
+
+** Todos os links (software semelhante, trabalhos acadêmicos e notícias da internet **
+
+**Análise de requisitos do sistema: **

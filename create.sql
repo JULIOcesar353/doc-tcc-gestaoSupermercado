@@ -116,17 +116,6 @@ INSERT INTO PERMISSOES (prm_nome) VALUES
 ('Estoque');
 
 -- =========================
--- 5. CARGO_PERMISSOES
--- =========================
--- Gerente: todas as permissões
-INSERT INTO CARGO_PERMISSOES VALUES
-(1, 1, 1, 1, 1),
-(1, 2, 1, 1, 1),
-(1, 3, 1, 1, 1),
-(1, 4, 1, 1, 1),
-(1, 5, 1, 1, 1);
-
--- =========================
 -- 3. SETORES
 -- =========================
 INSERT INTO SETORES (set_nome) VALUES
@@ -137,7 +126,6 @@ INSERT INTO SETORES (set_nome) VALUES
 ('Limpeza'),
 ('Estoque'),
 ('Logística');
-
 
 -- =========================
 -- 4. FUNCIONÁRIOS (20 funcionários)
@@ -165,10 +153,22 @@ VALUES
 (3, 4, 'Matheus Lima', 'matheus.lima@mercadobom.com', 'senha123', 1, NOW()),
 (7, 4, 'Bruna Cardoso', 'bruna.cardoso@mercadobom.com', 'senha123', 1, NOW());
 
+-- =========================
+-- 5. CARGO_PERMISSOES
+-- =========================
+-- Gerente: todas as permissões
+INSERT INTO CARGO_PERMISSOES VALUES
+(1, 1, 1, 1, 1),
+(1, 2, 1, 1, 1),
+(1, 3, 1, 1, 1),
+(1, 4, 1, 1, 1),
+(1, 5, 1, 1, 1);
+
 
 -- =========================
 -- 6. TAREFAS (20 tarefas)
 -- =========================
+
 INSERT INTO TAREFAS (tar_setor_id, tar_criado_por, tar_titulo, tar_descricao, tar_prioridade, tar_prazo, tar_status, tar_estimativa_minutos, tar_data_criacao, tar_exige_foto)
 VALUES
 (3, 1, 'Reposição de produtos de higiene', 'Repor prateleiras de sabonetes e shampoos.', 2, DATE_ADD(NOW(), INTERVAL 1 DAY), 0, 60, NOW(), 0),

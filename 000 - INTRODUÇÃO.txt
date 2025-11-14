@@ -1,10 +1,90 @@
 Se oriente pela analise de requisitos a seguir para criar a introdução de um trabalho de conclusão de curso, para um curso técnico em desenvolvimento de sistemas. O objetivo do trabalho é desenvolver uma sistema com  uma api (node js com express), um front-end (vite js) e uma versão mobile (react native - expo). Construa a introdução baseando-se em modelos de introdução de trabalhos de conclusão de curso ou artigo científico. 
 Informações sobre o trabalho: 
 
-**Pertinência, relevância e viabilidade**
+Sistema de Controle de Estoque e Escala de Repositores para Supermercados
+________________________________________
+Definição do Tema
+Pertinência
+O projeto envolve o desenvolvimento de um sistema que utilizará conhecimentos adquiridos nas disciplinas de Banco de Dados, Desenvolvimento Web, Aplicações Mobile e Engenharia de Software. A integração dessas áreas permitirá a criação de uma solução tecnológica funcional e completa.
+Relevância
+O sistema proposto visa otimizar o desempenho dos repositores, facilitar a identificação de produtos em falta nas prateleiras e gerenciar de forma prática e rápida a escala de trabalho dos colaboradores do setor. Através de um aplicativo, informações em tempo real estarão disponíveis tanto para os funcionários responsáveis pela reposição quanto para os gerentes, promovendo eficiência e organização nas operações.
+Viabilidade
+A implementação do sistema é viável, exigindo apenas a disponibilidade de dispositivos móveis (como smartphones ou tablets) para uso dos funcionários, além de acesso à internet. A infraestrutura necessária é básica e facilmente acessível para a maioria dos estabelecimentos do setor.
+________________________________________
+Problema Identificado
+Atualmente, há falta de organização na reposição de mercadorias, demora na identificação de produtos ausentes nas prateleiras, desorganização na escala de trabalho dos funcionários e ausência de informações em tempo real para a tomada de decisões.
+________________________________________
+Público-Alvo
+•	Supermercados
+•	Lojas de conveniência
+•	Lojas de grande porte com estoque e reposição contínua
+•	Distribuidoras de produtos
+________________________________________
+Justificativa
+O desenvolvimento deste sistema é relevante por atender uma demanda real do setor supermercadista, oferecendo uma solução que une tecnologia e gestão. A automatização dos processos de escala de trabalho e reposição de mercadorias garante maior agilidade, organização e eficiência. Para os repositores, o sistema reduz erros e aumenta a produtividade. Para os gestores, facilita o controle e o planejamento. Como resultado, há melhoria na qualidade do serviço e na experiência do cliente final.
+
 
 Gostaria que na introdução existam citações baseadas nos conteúdos a seguir (no final gerar as referências no formato ABNT para as citações realizadas):  
 
-** Todos os links (software semelhante, trabalhos acadêmicos e notícias da internet **
+Notícias da internet:
+https://cndl.org.br/varejosa/gondolas-vazia-perigo-a-vista-especialista-alerta-para-causas-da-ruptura-no-varejo-e-aponta-solucoes/
+https://abes.org.br/supermercado-carone-reduz-perdas-por-validade-em-78-e-amplia-vendas-com-apoio-de-solucao-totvs/?utm_source=chatgpt.com
+https://gizmodo.uol.com.br/google-cria-ia-para-monitorar-prateleiras-de-supermercado-veja/
+https://abes.org.br/supermercado-guanabara-reduz-perdas-financeiras-com-divergencia-de-precos-em-mais-de-30-com-tecnologia-da-totvs-e-gs1-brasil/?utm_source=chatgpt.com
+
+Software semelhante:
+https://www.oracle.com/retail/grocery/
+https://sgsistemas.com.br/
+https://wincash.gsoft.com.br/
+https://www.siacsistemas.com.br/
+https://hiper.com.br/
+
+Trabalhos acadêmicos:
+https://riut.utfpr.edu.br/jspui/bitstream/1/34096/1/sistemaautomatizacaochecklist.pdf
+https://repositorio.unesp.br/server/api/core/bitstreams/27d2e358-69bb-4833-986f-428828cca9ec/content
+https://ric-cps.eastus2.cloudapp.azure.com/bitstream/123456789/32867/1/Logistica_2024_giovanna_pires_de_oliveira_pereira_logistica_do_layout_de_supermercado_estrategias_de_aplica%C3%A7%C3%A3o.pdf
+https://ric.cps.sp.gov.br/bitstream/123456789/35379/1/ds_2025_1_maria_eduarda_da_silva_sistema_inteligente_de_localiza%C3%A7%C3%A3o_de_produtos_em_supermercados.pdf
+https://monografias.ufop.br/bitstream/35400000/6168/3/MONOGRAFIA_An%C3%A1liseSoftwaresGest%C3%A3o.pdf
+
+
 
 **Análise de requisitos do sistema: **
+
+1.	RF-01: Cadastro de funcionários — inserir nome, função, setor, e-mail/telefone (opcional), foto de perfil.
+2.	RF-02: Gestão de perfis — criar/editar papéis: Administrador, Supervisor, Funcionário; associar permissões.
+3.	RF-03: Autenticação — login por e-mail/usuário + senha; recuperação de senha.
+4.	RF-04: CRUD de tarefas — criar, ler, atualizar, excluir tarefas; cada tarefa tem: título, descrição, setor alvo, prioridade, prazo (data/hora), tempo estimado.
+5.	RF-05: Atribuição de tarefas — atribuir tarefas a um ou mais funcionários; opção de atribuição por setor (fila) ou individual.
+6.	RF-06: Notificações automáticas — enviar notificação (push no mobile e alert no web) quando uma tarefa for atribuída a um usuário ou a seu setor.
+7.	RF-07: Check-in/Marcar como iniciada — funcionário marca tarefa como iniciada; app registra data/hora de início; pode anexar foto como evidência.
+8.	RF-08: Upload de evidência — permitir upload de 1..N fotos por evento (início/conclusão); armazenamento seguro.
+9.	RF-09: Marcar como concluída — funcionário envia confirmação de conclusão; notificação enviada ao supervisor para validação (ou aprovação automática, conforme regra).
+10	RF-10 Painel de tarefas — visão com filtros: setor, funcionário, status (pendente, em andamento, concluída), prioridade e data.
+11	RF-11 Registro de tempo — sistema calcula tempo decorrido entre início e conclusão (ou check-out/manual) e armazena histórico.
+12	RF-12 Métricas de produtividade — calcular KPIs: tempo médio por tarefa, tarefas concluídas por funcionário/turno, taxa de reabertura.
+13	RF-13Relatórios — gerar relatórios por período, setor ou funcionário; exportar CSV/PDF.
+14	RF-14Filtros avançados — filtros por setor, funcionário, status, prazo, prioridade para dashboards e relatórios.
+15	RF-15Histórico e auditoria — manter logs de criação/edição/exclusão de tarefas, uploads e ações de usuário.
+________________________________________
+6. Requisitos Não-Funcionais (RNF)
+Usabilidade
+•	RNF-U1: Interface intuitiva e responsiva para celulares e tablets (React + React Native); operações em 1–3 toques para ações comuns.
+•	RNF-U2: Design limpo adaptado para uso rápido em ambiente de trabalho.
+Segurança
+•	RNF-S1: Controle de acesso baseado em papéis (RBAC) — validação no frontend e backend.
+•	RNF-S2: Acesso de login com usuário e senha.	
+•	RNF-S3: Armazenamento seguro de fotos (armazenamento em blob com acesso restrito; considerar criptografia em descanso ou políticas de acesso no SQL Server ou blobs externos).
+Performance
+•	RNF-P1: Tempo de resposta para operações críticas (abrir painel, enviar foto, atualizar status) abaixo de 2s em condições normais de rede.
+•	RNF-P2: Upload de fotos com feedback de progresso; compressão/resizing no cliente antes do upload para reduzir latência e uso de dados.
+Disponibilidade / Offline
+•	RNF-A1: Modo offline temporário no app mobile: permite marcar início/conclusão e armazenar fotos localmente; sincronização automática quando a conexão for restabelecida.
+•	RNF-A2: Conflitos de sincronização resolvidos por versão/último horário ou política definida (ex.: operações em ordem cronológica).
+Escalabilidade
+•	RNF-ES1: Arquitetura escalável (Node.js stateless + banco SQL Server escalável / réplicas) para suportar múltiplas lojas e maior número de usuários.
+•	RNF-ES2: Possibilidade de mover storage de fotos para serviço de blobs (Azure Blob Storage / S3) se necessário.
+Conformidade & Privacidade
+•	RNF-C1: Proteção de dados pessoais — armazenar apenas o necessário e permitir exclusão conforme regras da empresa/lei.
+
+
+
